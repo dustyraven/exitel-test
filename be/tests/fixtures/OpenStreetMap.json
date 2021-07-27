@@ -1,0 +1,38 @@
+[
+    {
+        "place_id": 118292113,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 123299954,
+        "boundingbox": [
+            "42.7154555",
+            "42.7178708",
+            "23.5260427",
+            "23.5291271"
+        ],
+        "lat": "42.7167133",
+        "lon": "23.5276389",
+        "display_name": "Vasil Levski blvd., m. Han Bogrov, Gorni Bogrov, Kremikovci, Sofia City, Sofia-City, 1870, Bulgaria",
+        "class": "highway",
+        "type": "trunk",
+        "importance": 0.5
+    },
+    {
+        "place_id": 199154490,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 479481557,
+        "boundingbox": [
+            "42.715548",
+            "42.7169535",
+            "23.5259094",
+            "23.5273585"
+        ],
+        "lat": "42.7161524",
+        "lon": "23.5265056",
+        "display_name": "Vasil Levski blvd., m. Han Bogrov, Gorni Bogrov, Kremikovci, Sofia City, Sofia-City, 1870, Bulgaria",
+        "class": "highway",
+        "type": "residential",
+        "importance": 0.5
+    }
+]
