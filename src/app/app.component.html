@@ -1,25 +1,26 @@
 <h1>
-  Longitude and Latitude
+    Geocode App
 </h1>
 
 <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="address">
-      Address
-    </label>
-    <input id="address" type="text" formControlName="address">
+    <div>
+        <label for="address">
+            Address
+        </label>
+        <input id="address" type="text" formControlName="address">
 
-    <button class="button" type="submit">Submit</button>
+        <button class="button" type="submit">Submit</button>
 
-  </div>
+    </div>
 </form>
 
 
 <div *ngIf="geocodes.length" style="margin-top:2rem;border-top: 2px solid #AAA;">
-  <div *ngFor="let geocode of geocodes" style="margin:1rem 0;">
-      <strong>{{geocode.provider}}: </strong>
-      <div *ngIf="geocode.error; then thenBlock else elseBlock"></div>
-      <ng-template #thenBlock>Error: {{geocode.error}}!</ng-template>
-      <ng-template #elseBlock>latitude {{geocode.latitude}}, longitude {{geocode.longitude}}.</ng-template>
-  </div>
+    <h2>Geocodes for "{{address}}":</h2>
+    <div *ngFor="let geocode of geocodes" style="margin:1rem 0;">
+        <strong>{{geocode.provider}}: </strong>
+        <div *ngIf="geocode.error; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>Error: {{geocode.error}}!</ng-template>
+        <ng-template #elseBlock>latitude {{geocode.latitude}}, longitude {{geocode.longitude}}.</ng-template>
+    </div>
 </div>

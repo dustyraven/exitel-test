@@ -16,6 +16,7 @@ export class AppComponent {
         address: ''
     });
 
+    address: string = '';
     geocodes: Geocode[] = [];
 
     constructor(
@@ -24,9 +25,10 @@ export class AppComponent {
     ) { }
 
     onSubmit(): void {
-        // this.apiService.getGeocode(this.addressForm.value.address).subscribe(data => console.log('DDD:', data));
-        this.apiService.getGeocodes(this.addressForm.value.address).subscribe(data => {this.geocodes = data; console.log(this.geocodes);});
-
-        // this.addressForm.reset();
+        this.address = this.addressForm.value.address;
+        if (!this.address) {
+            return;
+        }
+        this.apiService.getGeocodes(this.address).subscribe(data => this.geocodes = data);
     }
 }
